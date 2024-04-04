@@ -1,14 +1,12 @@
 /**
- * @param {number[]} nums
+ * @param {number[]} arr
  * @param {Function} fn
- * @param {number} init
- * @return {number}
+ * @return {number[]}
  */
-var reduce = function (nums, fn, init) {
-  val = init;
-  for (let i = 0; i < nums.length; i++) {
-    val = fn(val, nums[i]);
+var map = function (arr, fn) {
+  let returnedArray = [];
+  for (let i = 0; i < arr.length; i++) {
+    returnedArray[i] = fn(arr[i], i);
   }
-
-  return val;
+  return returnedArray;
 };
